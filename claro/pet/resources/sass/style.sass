@@ -1,4 +1,4 @@
-// URL to the website fonts
+// fonts
 @font-face
 	font-family: DINPro
 	src: url(../fonts/DINPro.otf)
@@ -8,15 +8,34 @@
 	src: url(../fonts/DINPro-Bold.otf)
 	font-weight: 700
 
+// color variables
 $background 	: #363636
 $cta 			: #D92600
-$text 			: #FFF
+$text-color		: #FFF
 $gradient-start : #F00
 $default-font 	: "DINPro", "Roboto", sans-serif
 $default-weight : 500
 $bold-weight 	: 700
 
+//don't edit
 *
 	padding: 0
 	margin: 0
 	font-family: $default-font
+	box-sizing: border-box
+	transition: all ease 0.3s
+body
+	background: $background
+header
+	background: url(../img/header_background.png) no-repeat center right
+	background-size: cover
+	min-height: 700px
+.container
+	width: 100%
+	max-width: 1000px
+	padding: 10px
+	margin: 0 auto
+	.icon
+		width: 80px
+	h1
+		color: $text-color

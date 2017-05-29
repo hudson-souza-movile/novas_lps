@@ -1,2 +1,2 @@
-@font-face{font-family:DINPro;src:url(../fonts/DINPro.otf);font-weight:500}@font-face{font-family:DINPro;src:url(../fonts/DINPro-Bold.otf);font-weight:700}*{padding:0;margin:0;font-family:"DINPro","Roboto",sans-serif}
+@font-face{font-family:DINPro;src:url(../fonts/DINPro.otf);font-weight:500}@font-face{font-family:DINPro;src:url(../fonts/DINPro-Bold.otf);font-weight:700}*{padding:0;margin:0;font-family:"DINPro","Roboto",sans-serif;box-sizing:border-box;transition:all ease .3s}body{background:#363636}header{background:url(../img/header_background.png) no-repeat center right;background-size:cover;min-height:700px}.container{width:100%;max-width:1000px;padding:10px;margin:0 auto}.container .icon{width:80px}.container h1{color:#FFF}
 /*# sourceMappingURL=style.css.map */
