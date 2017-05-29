@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "WAEC,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,wBAAwB,CAC7B,WAAW,CAAE,GAAG,YAEhB,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,6BAA6B,CAClC,WAAW,CAAE,GAAG,CAUjB,CAAC,CACA,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,WAAW,CAPK,4BAA8B",
+"sources": ["../sass/style.sass"],
+"names": [],
+"file": "style.css"
+}
