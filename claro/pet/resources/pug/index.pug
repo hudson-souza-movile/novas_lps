@@ -5,34 +5,40 @@ head
 body
 	#app
 		header
+			.container.flex
+				div
+					h1 Conteúdo de Alexandre Rossi, o Dr. Pet!
+					p As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação.
+					a.cta(href="subscription.html") Quero dicas do Dr. Pet!
+				img(src="resources/img/header-img.png", alt="cachorro claro pet")
+		section.features
 			.container
-				img(src="resources/img/icon.png", class="icon", alt="ícone claro pet")
-				h1 Conteúdo de Alexandre Rossi, o Dr. Pet!
-				p As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação.
-				a.cta(href="subscription.html") Quero dicas do Dr. Pet!
-		section
-			.container
-				h2 Saiba além do básico
+				h2 Saia do básico
 				.content
-					.img-first
-					div
-						h3 O melhor ensinando
-						span Alexandre é formado em Zootecnia e mestre em Psicologia pela USP, com especialização em Comportamento Animal pela Universidade de Queensland, na Austrália.
-					div
-						h3 Múltiplos canais
-						span O Dicas Pet leva pra você informações sobre cães, gatos, adestramento e sobre a Estopinha. Escolha quantos canais quiser receber sem pagar a mais por isso.
-					div
-						h3 Gatinhos também!
-						span Se seu pet é um gatinho você também tem muito pra ver com Dicas Pet. Todas as semanas temos conteúdo novo pra você saber cuidar melhor do seu felino querido!
+					.card
+						div
+							h3 Dicas do melhor
+							p Alexandre é formado em Zootecnia e mestre em Psicologia pela USP, com especialização em Comportamento Animal pela Universidade de Queensland, na Austrália.
+						img(src="resources/img/img-card1.png", alt="Alexandre Rossi")
+					.card
+						div
+							h3 Múltiplos canais
+							p O Dicas Pet leva pra você informações sobre cães, gatos, adestramento e sobre a Estopinha. Escolha quantos canais quiser receber sem pagar a mais por isso.
+						img(src="resources/img/img-card2.png", alt="Cachorro e gatos amigos")
+					.card
+						div
+							h3 Gatos também!
+							p Se seu pet é um gatinho você também tem muito pra ver com Dicas Pet. Todas as semanas temos conteúdo novo pra você saber cuidar melhor do seu felino querido!
+						img(src="resources/img/img-card3.png", alt="Gato")
 					
 		section.como
 			.container
-				h2 Como funciona?
 				.content
 					div
+						h2 Como funciona?
 						p O Claro Pet pode ser assinado apenas por cliente Claro, aqui neste site ou enviando uma mensagem com a palavra “PET” para o número 738. Depois de assinar você vai ter 3 dias para experiementar gratuitamente e depois o custo é de apenas R$3,99/semana.
 						p Todo assinante recebe 1 MMS referente a categoria que selecionou (Adestramento, Cão, Gato e Estopinha). Lembrando que você pode receber quantas quiser, é só enviar a palavra “MAIS” para 738!
-					.img-second
+					img(src="resources/img/img-como-funciona.png", alt="exemplo de sms")
 		section.cta2
 			.container
 				h2 Quer receber tudo isso?

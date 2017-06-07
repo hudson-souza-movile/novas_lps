@@ -18,16 +18,26 @@
 // global styles
 .container
 	width: 100%
-	max-width: 1000px
-	padding: 10px
+	max-width: 1200px
+	padding: 0px 30px
 	margin: 0 auto
 	position: relative
 html
 	font-size: 10px
 body
 	background: $background
-a, p, h1, h2, h3, h4
+h1
+	color: $header-title
+a, h2
 	color: $subtitle-color
+.cta2
+	h2
+		color: $cta2-title
+p, h3
+	color: $text-color
+header p
+	color: $header-p
+	font-size: 2.4rem
 span
 	color: $text-color
 h1
@@ -35,80 +45,117 @@ h1
 	line-height: 1
 	margin-top: 25px
 h2
-	font-size: 5rem
+	font-size: 6rem
 h3
-	font-size: 3.2rem
+	font-size: 3rem
 p
-	font-size: 2.4rem
+	font-size: 2rem
 	line-height: 1.5
 span
-	font-size: 1.8rem
+	font-size: 2rem
 	line-height: 1.5
 a.cta
 	display: inline-block
 	padding: 20px 10px
 	width: 400px
-	background: $cta
+	background: $cta-bg
+	color: $cta-text
 	font-weight: $bold-weight
 	font-size: 2.8rem
 	text-align: center
-	border-bottom: 5px solid $cta-darker
+	border-bottom: 5px solid $cta-border
 	box-shadow: 0px 2px 22px rgba(0,0,0,0.5)
+	border-radius: $border-radius
+	transform-origin: bottom center
+a.cta:hover
+	transform: scale(1.01)
+	box-shadow: 0px 2px 60px rgba(0,0,0,0.3)
 
 //
 #app
 	width: 100vw
 	overflow-x: hidden
 header
-	background: url(../img/header_background.png) no-repeat top right
+	background: $header-bg
+	box-shadow: 0 3px 20px 0 rgba(168,118,125,0.62)
 	background-size: cover
-	min-height: 650px
 	position: relative
+	padding: 30px 0px
 	.container
-		padding-top: 100px
-		min-height: 650px
+		display: flex
+		align-items: center
+		justify-content: space-between
 	h1, p
 		max-width: 460px
 	p
-		margin-top: 25px
-	.icon
-		width: 60px
+		margin-top: 10px
+	img
+		width: 100%
+		max-width: 550px
 	a.cta
 		position: absolute
 		bottom: 0px
-		transform: translateY(50%)
+		transform: translateY(calc(50% + 30px))
+	a.cta:hover
+		transform: translateY(calc(50% + 30px)) scale(1.05)
 section
 	position: relative
-	margin-top: 150px
+	margin-top: 90px
 	.content
 		display: flex
+		justify-content: space-between
 		align-items: flex-start
 		margin-top: 30px
-		div
-			margin-right: 30px
-	.img-first
-		padding: 120px
-		border-radius: 100%
-		background: url(../img/img1.png) no-repeat $img-1-align
-		background-size: cover
-	.img-second
-		align-self: flex-start
-		border-radius: 100%
-		padding: 140px
-		background: url(../img/img2.png) no-repeat $img-2-align
-		background-size: cover
-	h2
-		margin-bottom: 30px
 	p
 		color: $text-color
 		margin-bottom: 15px
-section.cta2
-	text-align: center
-footer
-	background-image: linear-gradient(-180deg, $gradient-end 0%, $gradient-start 100%) 
+.features
+	margin-top: 130px
 	.content
-		min-height: 250px
+		align-items: stretch
+		margin-left: -15px
+		margin-right: -15px
+.card
+	background: white
+	padding: 3rem
+	border-radius: $border-radius
+	box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.10)
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	overflow: hidden
+	margin: 15px
+	h3
+		margin-bottom: 2rem
+	p
+		padding-bottom: 30px
+	img
+		width: calc(100% + 60px)
+		margin-right: -30px
+		margin-left: -30px
+		margin-bottom: -30px
+section.como
+	.content
+		div
+			max-width: 600px
+		img
+			max-width: 350px
+
+section.cta2
+	padding: 60px 0px
+	text-align: center
+	background: $cta2-bg
+	.cta
+		margin-top: 10px
+footer
+	padding: 30px 0px
+	.content
 		height: 100%
 		display: flex
 		align-items: center
 		justify-content: space-between
+		div
+			a
+				img
+					width: 40px
+					margin-left: 0px
