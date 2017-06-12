@@ -8,7 +8,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
   <link rel="stylesheet" href="resources/css/style.css"/>
   <script src="resources/js/moon.min.js"></script>
-  <script src="resources/js/custom.js"></script>
   <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
   <title>Claro Pet</title>
   <meta name="description" content="As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação."/>
@@ -30,31 +29,31 @@
     <header>
       <div class="container flex">
         <div>
-          <h1>Conteúdo de Alexandre Rossi, o Dr. Pet!</h1>
-          <p>As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação.</p><a class="cta" href="subscription.html">Quero dicas do Dr. Pet!</a>
+          <h1>{{ page_title }}</h1>
+          <p>{{ page_subtitle }}</p><a class="cta" href="subscription.html">{{ cta1 }}</a>
         </div><img src="resources/img/header-img.png" alt="cachorro claro pet"/>
       </div>
     </header>
     <section class="features">
       <div class="container">
-        <h2>Saia do básico</h2>
+        <h2>{{ sec1_title }}</h2>
         <div class="content">
           <div class="card">
             <div>
-              <h3>Dicas do melhor</h3>
-              <p>Alexandre é formado em Zootecnia e mestre em Psicologia pela USP, com especialização em Comportamento Animal pela Universidade de Queensland - Austrália.</p>
+              <h3>{{ card1_title }}</h3>
+              <p>{{ card1_text }}</p>
             </div><img src="resources/img/img-card1.png" alt="Alexandre Rossi"/>
           </div>
           <div class="card">
             <div>
-              <h3>Múltiplos canais</h3>
-              <p>O Dicas Pet leva pra você informações sobre cães, gatos, adestramento e sobre a Estopinha. Escolha quantos canais quiser receber sem pagar a mais por isso.</p>
+              <h3>{{ card2_title }}</h3>
+              <p>{{ card2_text }}</p>
             </div><img src="resources/img/img-card2.png" alt="Cachorro e gatos amigos"/>
           </div>
           <div class="card">
             <div>
-              <h3>Gatos também!</h3>
-              <p>Se seu pet é um gatinho você também tem muito pra ver com Dicas Pet. Todas as semanas temos conteúdo novo pra você saber cuidar melhor do seu felino querido!</p>
+              <h3>{{ card3_title }}</h3>
+              <p>{{ card3_text }}</p>
             </div><img src="resources/img/img-card3.png" alt="Gato"/>
           </div>
         </div>
@@ -64,24 +63,25 @@
       <div class="container">
         <div class="content">
           <div>
-            <h2>Como funciona?</h2>
-            <p>O Claro Pet pode ser assinado apenas por cliente Claro, aqui neste site ou enviando uma mensagem com a palavra “PET” para o número 738. Depois de assinar você vai ter 3 dias para experiementar gratuitamente e depois o custo é de apenas R$3,99/semana.</p>
-            <p>Todo assinante recebe 1 MMS referente a categoria que selecionou (Adestramento, Cão, Gato e Estopinha). Lembrando que você pode receber quantas quiser, é só enviar a palavra “MAIS” para 738!</p>
+            <h2>{{ sec2_title }}</h2>
+            <p>{{ sec2_text }}</p>
+            <p m-if="sec2_text2">{{ sec2_text2 }}</p>
           </div><img src="resources/img/img-como-funciona.png" alt="exemplo de sms"/>
         </div>
       </div>
     </section>
     <section class="cta2">
       <div class="container">
-        <h2>Quer receber tudo isso?</h2><a class="cta" href="subscription.html">Quero dicas do Dr. Pet!</a>
+        <h2>{{ sec3_title }}</h2><a class="cta" href="subscription.html">{{ cta2 }}</a>
       </div>
     </section>
     <footer>
       <div class="container">
-        <div class="content"><a href="http://claro.com.br"><img src="resources/img/badge.png" target="_blank" alt="Claro"/></a><span>© Copyright 2017 - Todos os direitos reservados</span>
+        <div class="content"><a href="http://claro.com.br"><img src="resources/img/badge.png" target="_blank" alt="Claro"/></a><span>© Copyright {{ year }} - Todos os direitos reservados</span>
           <div><a href="https://www.facebook.com/clarobrasil"><img src="resources/img/fb_icon.png" target="_blank" alt="Facebook Claro"/></a><a href="https://twitter.com/clarobrasil"><img src="resources/img/tw_icon.png" target="_blank" alt="Twitter Claro"/></a></div>
         </div>
       </div>
     </footer>
   </div>
+  <script src="resources/js/data.js"></script>
 </body>

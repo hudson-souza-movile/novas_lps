@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 html(lang="pt-br")
 head
-	include basic_head
+	include templates/basic_head
 body
 	#app
 		header
 			.container.flex
 				div
-					h1 Conteúdo de Alexandre Rossi, o Dr. Pet!
-					p As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação.
-					a.cta(href="subscription.html") Quero dicas do Dr. Pet!
+					h1 {{ page_title }}
+					p {{ page_subtitle }}
+					a.cta(href="subscription.html") {{ cta1 }}
 				img(src="resources/img/header-img.png", alt="cachorro claro pet")
 		section.features
 			.container
-				h2 Saia do básico
+				h2 {{ sec1_title }}
 				.content
 					.card
 						div
-							h3 Dicas do melhor
-							p Alexandre é formado em Zootecnia e mestre em Psicologia pela USP, com especialização em Comportamento Animal pela Universidade de Queensland - Austrália.
+							h3 {{ card1_title }}
+							p {{ card1_text }}
 						img(src="resources/img/img-card1.png", alt="Alexandre Rossi")
 					.card
 						div
-							h3 Múltiplos canais
-							p O Dicas Pet leva pra você informações sobre cães, gatos, adestramento e sobre a Estopinha. Escolha quantos canais quiser receber sem pagar a mais por isso.
+							h3 {{ card2_title }}
+							p {{ card2_text }}
 						img(src="resources/img/img-card2.png", alt="Cachorro e gatos amigos")
 					.card
 						div
-							h3 Gatos também!
-							p Se seu pet é um gatinho você também tem muito pra ver com Dicas Pet. Todas as semanas temos conteúdo novo pra você saber cuidar melhor do seu felino querido!
+							h3 {{ card3_title }}
+							p {{ card3_text }}
 						img(src="resources/img/img-card3.png", alt="Gato")
 					
 		section.como
 			.container
 				.content
 					div
-						h2 Como funciona?
-						p O Claro Pet pode ser assinado apenas por cliente Claro, aqui neste site ou enviando uma mensagem com a palavra “PET” para o número 738. Depois de assinar você vai ter 3 dias para experiementar gratuitamente e depois o custo é de apenas R$3,99/semana.
-						p Todo assinante recebe 1 MMS referente a categoria que selecionou (Adestramento, Cão, Gato e Estopinha). Lembrando que você pode receber quantas quiser, é só enviar a palavra “MAIS” para 738!
+						h2 {{ sec2_title }}
+						p {{ sec2_text }}
+						p(m-if="sec2_text2") {{ sec2_text2 }}
 					img(src="resources/img/img-como-funciona.png", alt="exemplo de sms")
 		section.cta2
 			.container
-				h2 Quer receber tudo isso?
-				a.cta(href="subscription.html") Quero dicas do Dr. Pet!
+				h2 {{ sec3_title }}
+				a.cta(href="subscription.html") {{ cta2 }}
 		footer
 			.container
 				.content
 					a(href="http://claro.com.br")
 						img(src="resources/img/badge.png", target="_blank", alt="Claro")
-					span © Copyright 2017 - Todos os direitos reservados
+					span © Copyright {{ year }} - Todos os direitos reservados
 					div
 						a(href="https://www.facebook.com/clarobrasil")
 							img(src="resources/img/fb_icon.png", target="_blank", alt="Facebook Claro")
 						a(href="https://twitter.com/clarobrasil")
 							img(src="resources/img/tw_icon.png", target="_blank", alt="Twitter Claro")
+	script(src="resources/js/data.js")
