@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+head
+	include templates/subscription_head
+body
+	header
+		a(href="index.html") Dicas Pet
+		.carrier-logo
+	form(action="#")
+		p Siga os passos para concluir a sua assinatura do produto.
+		p Insira seu número de celular:
+		input(type="tel", id="phone", name="phone", placeholder="(19) 99999-9999", maxlength="15")
+		.checkbox
+			input(type="checkbox", id="checkbox")
+			label(for="checkbox") Li e aceito os 
+				a(href="termos.html") termos e condições
+		a.cta Assinar
+		p Valor do serviço de R$ 3,99 por semana. Experimente grátis por 3 dias.

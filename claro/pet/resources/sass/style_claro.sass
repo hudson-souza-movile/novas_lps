@@ -1,0 +1,84 @@
+@import "_editable" 
+
+//reset
+*
+	padding: 0
+	margin: 0
+	font-family: $default-font
+	box-sizing: border-box
+	transition: all ease 0.3s
+	text-decoration: none
+
+header
+	background: $top-bar-bg
+	display: flex
+	align-items: center
+	justify-content: space-between
+	box-shadow: 0 1px 13px 0 rgba(0,0,0,0.20)
+	padding: 10px 20px
+	a
+		cursor: pointer
+		position: relative
+		padding-left: 20px
+		font-size: 20px
+		font-weight: $bold-weight
+		color: $title-color
+		&:before
+			position: absolute
+			top: 5px
+			left: 0
+			content: ""
+			background: url(../img/back.png) no-repeat center center $title-color
+			background-size: contain
+			width: 16px
+			height: 16px
+	.carrier-logo
+		width: 60px
+		height: 40px
+		background: url(../img/carrier-logo.png) no-repeat center right
+		background-size: contain
+form
+	width: 100%
+	max-width: 414px
+	margin: 20px auto
+	padding: 10px 20px
+	p
+		margin-bottom: 10px
+		font-size: 16px
+	input[type='tel']
+		width: 100%
+		padding: 10px
+		background: $input-bg
+		border: 2px solid $input-border
+		border-radius: 8px
+		font-size: 24px
+		font-weight: $bold-weight
+		text-align: center
+		outline: none
+		color: $text-color
+		margin-bottom: 10px
+	.checkbox
+		display: flex
+		align-items: center
+	input[type='checkbox']
+		width: 16px
+		height: 16px
+		margin-right: 5px
+	label
+		font-size: 16px
+		a
+			color: $input-border
+.cta
+	display: inline-block
+	padding: 10px 0px
+	margin: 10px 0px
+	width: 100%
+	background: $cta-bg
+	color: $cta-text
+	font-weight: $bold-weight
+	font-size: 24px
+	text-align: center
+	border-bottom: 4px solid $cta-border
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.2)
+	border-radius: $border-radius
+	transform-origin: center
