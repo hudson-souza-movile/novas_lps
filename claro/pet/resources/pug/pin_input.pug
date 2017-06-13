@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+head
+	include templates/subscription_head
+body
+	header
+		a(href="subscription.html") Dicas Pet
+		.carrier-logo
+	form(name='numero', id='form-numero', action="#springUrl( $subscriptionURL )" method="post", onsubmit='getPhone(event)')
+		.hidden
+			| #if( $hiddenFieldsMap.entrySet() )
+			| #foreach($hiddenField in $hiddenFieldsMap.entrySet())
+			input(type="hidden" name="$hiddenField.key" value="$hiddenField.value")
+			| #end
+			| #end
+		p Siga os passos para concluir a sua assinatura do produto.
+		p Insira o PIN recebido:
+		input.pin(type="tel", id="pin", name="pin", placeholder="1234", maxlength="4")
+		button.cta Confirmar
+		a(href="javascript:") Reenviar PIN.
+	.hidden
+		//- analytics
+		| #if( $pixel )
+		| $pixel
+		| #end
+		| #if( $analytics )
+		| $analytics
+		| #end

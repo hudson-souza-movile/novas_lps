@@ -16,14 +16,84 @@
   <header><a href="index.html">Dicas Pet</a>
     <div class="carrier-logo"></div>
   </header>
-  <form action="#">
+  <form name="numero" id="form-numero" action="#springUrl( $subscriptionURL )" method="post" onsubmit="getPhone(event)">
+    <div class="hidden">
+      #if( $hiddenFieldsMap.entrySet() )
+      #foreach($hiddenField in $hiddenFieldsMap.entrySet())
+      <input type="hidden" name="$hiddenField.key" value="$hiddenField.value"/>
+      #end
+      #end
+    </div>
     <p>Siga os passos para concluir a sua assinatura do produto.</p>
     <p>Insira seu número de celular:</p>
-    <input type="tel" id="phone" name="phone" placeholder="(19) 99999-9999" maxlength="15"/>
+    <input type="tel" id="numero" name="numero" placeholder="(99) 9999-99999" maxlength="15"/>
     <div class="checkbox">
       <input type="checkbox" id="checkbox"/>
       <label for="checkbox">Li e aceito os <a href="termos.html">termos e condições</a></label>
-    </div><a class="cta">Assinar</a>
+    </div>
+    <input type="hidden" id="ddd"/>
+    <input type="hidden" id="telefone"/>
+    <button class="cta">Assinar</button>
     <p>Valor do serviço de R$ 3,99 por semana. Experimente grátis por 3 dias.</p>
   </form>
+  <div class="hidden">
+    #if( $pixel )
+    $pixel
+    #end
+    #if( $analytics )
+    $analytics
+    #end
+  </div>
+  <script>
+    // to mask the phone number
+    function mascara(o,f){
+    	v_obj=o
+    	v_fun=f
+    	setTimeout("execmascara()",1)
+    }
+    function execmascara(){
+    	v_obj.value=v_fun(v_obj.value)
+    }
+    function mtel(v){
+    	v=v.replace(/\D/g,"");
+    	v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+    	v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+    	return v;
+    }
+    function id(el){
+    	return document.getElementById(el);
+    }
+    window.onload = function(){
+    	id('numero').onkeypress = function(){
+    		mascara(this, mtel);
+    	}
+    }
+    // end mask phone number
+    // - - - - - - - - - -
+    // Split the number between DDD + Phone for Albatross
+    // Then submits the form
+    function getPhone(event) {
+    	var numero = document.getElementById("numero").value;
+    	var ddd = numero.slice(1, 3);
+    	var firstHalf = numero.slice(5,10)
+    	var secondHalf = numero.slice(11,15)
+    	var phone = (firstHalf)+(secondHalf)
+    
+    	document.getElementById("ddd").value = ddd;
+    	document.getElementById("telefone").value = phone;
+    	console.log(ddd, phone);
+    	//- debugger
+    	var check = document.getElementById('checkbox').checked;
+    	if (check === true) {
+    		document.getElementById("form-numero").submit();
+    		console.log(check);
+    	} else {
+    		event.preventDefault();
+    		alert("Por favor, concorde com os termos")
+    		document.getElementById('checkbox').focus();
+    		console.log(check);
+    	}
+    }
+    //end split string and form submit
+  </script>
 </body>
