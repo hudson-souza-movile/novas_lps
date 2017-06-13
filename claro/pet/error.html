@@ -16,7 +16,7 @@
   <header><a href="subscription.html">Dicas Pet</a>
     <div class="carrier-logo"></div>
   </header>
-  <form name="numero" id="form-numero" action="#springUrl( $subscriptionURL )" method="post" onsubmit="getPhone(event)">
+  <div class="container">
     <div class="hidden">
       #if( $hiddenFieldsMap.entrySet() )
       #foreach($hiddenField in $hiddenFieldsMap.entrySet())
@@ -24,11 +24,9 @@
       #end
       #end
     </div>
-    <p>Siga os passos para concluir a sua assinatura do produto.</p>
-    <p>Insira o PIN recebido:</p>
-    <input class="pin" type="tel" id="pin" name="pin" placeholder="1234" maxlength="4" onkeypress="validate(event)"/>
-    <button class="cta">Confirmar</button><a href="javascript:">Reenviar PIN.</a>
-  </form>
+    <p>Infelizmente houve um erro na sua assinatura</p>
+    <p>Clique no botão e tente novamente:</p><a class="cta" href="pin_input.html">Tentar de novo</a>
+  </div>
   <div class="hidden">
     #if( $pixel )
     $pixel
@@ -37,16 +35,4 @@
     $analytics
     #end
   </div>
-  <script>
-    function validate(evt) {
-    	var theEvent = evt || window.event;
-    	var key = theEvent.keyCode || theEvent.which;
-    	key = String.fromCharCode( key );
-    	var regex = /[0-9]|\./;
-    	if( !regex.test(key) ) {
-    		theEvent.returnValue = false;
-    		if(theEvent.preventDefault) theEvent.preventDefault();
-    	}
-    }
-  </script>
 </body>

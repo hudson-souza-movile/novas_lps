@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#db5945"/>
 </head>
 <body>
-  <header><a href="subscription.html">Dicas Pet</a>
+  <header><a href="index.html">Dicas Pet</a>
     <div class="carrier-logo"></div>
   </header>
   <form name="numero" id="form-numero" action="#springUrl( $subscriptionURL )" method="post" onsubmit="getPhone(event)">
@@ -25,9 +25,14 @@
       #end
     </div>
     <p>Siga os passos para concluir a sua assinatura do produto.</p>
-    <p>Insira o PIN recebido:</p>
-    <input class="pin" type="tel" id="pin" name="pin" placeholder="1234" maxlength="4" onkeypress="validate(event)"/>
-    <button class="cta">Confirmar</button><a href="javascript:">Reenviar PIN.</a>
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox"/>
+      <label for="checkbox">Li e aceito os <a href="termos.html">termos e condições</a></label>
+    </div>
+    <input type="hidden" id="ddd"/>
+    <input type="hidden" id="telefone"/>
+    <button class="cta">Assinar</button>
+    <p>Valor do serviço de R$ 3,99 por semana. Experimente grátis por 3 dias.</p>
   </form>
   <div class="hidden">
     #if( $pixel )
@@ -38,14 +43,15 @@
     #end
   </div>
   <script>
-    function validate(evt) {
-    	var theEvent = evt || window.event;
-    	var key = theEvent.keyCode || theEvent.which;
-    	key = String.fromCharCode( key );
-    	var regex = /[0-9]|\./;
-    	if( !regex.test(key) ) {
-    		theEvent.returnValue = false;
-    		if(theEvent.preventDefault) theEvent.preventDefault();
+    // Check checkbox
+    function getPhone(event) {
+    	var check = document.getElementById('checkbox').checked;
+    	if (check === true) {
+    		document.getElementById("form-numero").submit();
+    	} else {
+    		event.preventDefault();
+    		alert("Por favor, concorde com os termos")
+    		document.getElementById('checkbox').focus();
     	}
     }
   </script>

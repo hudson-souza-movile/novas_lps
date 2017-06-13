@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+head
+	include templates/subscription_head
+body
+	header
+		a(href="subscription.html") Dicas Pet
+		.carrier-logo
+	.container
+		.hidden
+			| #if( $hiddenFieldsMap.entrySet() )
+			| #foreach($hiddenField in $hiddenFieldsMap.entrySet())
+			input(type="hidden" name="$hiddenField.key" value="$hiddenField.value")
+			| #end
+			| #end
+		p Infelizmente houve um erro na sua assinatura
+		p Clique no botão e tente novamente:
+		a.cta(href="pin_input.html") Tentar de novo
+	.hidden
+		//- analytics
+		| #if( $pixel )
+		| $pixel
+		| #end
+		| #if( $analytics )
+		| $analytics
+		| #end
