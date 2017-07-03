@@ -23,10 +23,11 @@
   <meta name="twitter:description" content="Dicas do Dr. Pet para seu bichinho de estimação!"/>
   <meta name="twitter:card" content="summary"/>
   <meta name="twitter:image" content="resources/img/img-header.png"/>
+  <script src="resources/js/contraste.js"></script>
 </head>
-<body>
+<body id="body" onload="load_contraste()">
   <div id="app">
-    <header>
+    <header id="inico"><a class="jump_link" href="#vantagens">Ir para seção vantagens</a><a class="contraste" href="javascript:" onclick="contraste()">Ativar contraste</a>
       <div class="container flex">
         <div>
           <h1>{{ page_title }}</h1>
@@ -34,7 +35,7 @@
         </div><img src="resources/img/header-img.png" alt="cachorro claro pet"/>
       </div>
     </header>
-    <section class="features">
+    <section class="features" id="vantagens"><a class="jump_link" href="#como_funciona">Ir para seção Como funciona</a>
       <div class="container">
         <h2>{{ sec1_title }}</h2>
         <div class="content">
@@ -59,7 +60,7 @@
         </div>
       </div>
     </section>
-    <section class="como">
+    <section class="como" id="como_funciona"><a class="jump_link" href="#assinar">Ir para seção Assinar</a>
       <div class="container">
         <div class="content">
           <div>
@@ -70,12 +71,12 @@
         </div>
       </div>
     </section>
-    <section class="cta2">
+    <section class="cta2" id="assinar"><a class="jump_link" href="#redes">Ir para seção Redes sociais</a>
       <div class="container">
         <h2>{{ sec3_title }}</h2><a class="cta" href="subscription.html">{{ cta2 }}</a>
       </div>
     </section>
-    <footer>
+    <footer id="redes">
       <div class="container">
         <div class="content"><a href="http://claro.com.br"><img src="resources/img/badge.png" target="_blank" alt="Claro"/></a><span>© Copyright {{ year }} - Todos os direitos reservados</span>
           <div><a href="https://www.facebook.com/clarobrasil"><img src="resources/img/fb_icon.png" target="_blank" alt="Facebook Claro"/></a><a href="https://twitter.com/clarobrasil"><img src="resources/img/tw_icon.png" target="_blank" alt="Twitter Claro"/></a></div>

@@ -93,3 +93,21 @@ a
 	box-shadow: 0px 2px 10px rgba(0,0,0,0.2)
 	border-radius: $border-radius
 	transform-origin: center
+.contraste-on
+	background: white !important
+	section, header, footer
+		background: white !important
+	*
+		color: black !important
+		filter: grayscale(100%) !important
+	section
+		border-bottom: 1px solid black
+	.contraste
+		background: black !important
+		color: white !important
+	input[type='tel']
+		border: 1px solid black !important
+	input[type='submit'], button, .cta
+		background: black !important
+		color: white !important
+		filter: grayscale(100%) !important

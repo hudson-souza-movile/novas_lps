@@ -67,6 +67,27 @@ a.cta
 a.cta:hover
 	transform: scale(1.01)
 	box-shadow: 0px 2px 60px rgba(0,0,0,0.3)
+a.jump_link
+	position: absolute
+	top: 0
+	left: 0
+	opacity: 0
+	z-index: 99
+	font-size: 14px
+	padding: 10px
+	background: #fff
+	color: $text-color
+	&:focus
+		opacity: 1
+.contraste
+	position: absolute
+	top: 0
+	right: 0
+	background: white
+	color: black
+	padding: 8px
+	border: none
+	font-size: 14px
 
 //
 #app
@@ -241,6 +262,7 @@ footer
 	footer
 		span
 			margin-bottom: 10px
+			text-align: center
 		a, div
 			order: 1
 @media (max-width: 500px)
@@ -270,3 +292,26 @@ footer
 				img
 					max-width: calc(100% + 30px)
 					margin: 10px -15px -15px -15px
+.contraste-on
+	background: white !important
+	*
+		color: black !important
+		filter: grayscale(100%) !important
+	section, header, footer
+		background: white !important
+	.cta2
+		background: black !important
+		h2
+			color: white !important
+		.cta
+			background: white !important
+			color: black !important
+	.contraste
+		background: black !important
+		color: white !important
+	input[type='tel']
+		border: 1px solid black !important
+	input[type='submit'], button, .cta
+		background: black !important
+		color: white !important
+		filter: grayscale(100%) !important
