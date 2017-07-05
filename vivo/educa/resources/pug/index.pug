@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+head
+	include templates/basic_head
+body#body(onload="load_contraste()")
+	#app
+		header#inico
+			a.jump_link(href="#vantagens") Ir para seção vantagens
+			a.contraste(href="javascript:", onclick="contraste()") Ativar contraste
+			.container.flex
+				div
+					h1 {{ page_title }}
+					p {{ page_subtitle }}
+					a.cta(href="subscription.html") {{ cta1 }}
+				img(src="resources/img/header-img.png", alt="cachorro claro pet")
+		section.features#vantagens
+			a.jump_link(href="#como_funciona") Ir para seção Como funciona
+			.container
+				h2 {{ sec1_title }}
+				.content
+					.card
+						div
+							h3 {{ card1_title }}
+							p {{ card1_text }}
+						img(src="resources/img/img-card1.png", alt="Alexandre Rossi")
+					.card
+						div
+							h3 {{ card2_title }}
+							p {{ card2_text }}
+						img(src="resources/img/img-card2.png", alt="Cachorro e gatos amigos")
+					.card
+						div
+							h3 {{ card3_title }}
+							p {{ card3_text }}
+						img(src="resources/img/img-card3.png", alt="Gato")
+					
+		section.como#como_funciona
+			a.jump_link(href="#assinar") Ir para seção Assinar
+			.container
+				.content
+					div
+						h2 {{ sec2_title }}
+						p {{ sec2_text }}
+						p(m-if="sec2_text2") {{ sec2_text2 }}
+					img(src="resources/img/img-como-funciona.png", alt="exemplo de sms")
+		section.cta2#assinar
+			a.jump_link(href="#redes") Ir para seção Redes sociais
+			.container
+				h2 {{ sec3_title }}
+				a.cta(href="subscription.html") {{ cta2 }}
+		footer#redes
+			.container
+				.content
+					a(href="http://claro.com.br")
+						img(src="resources/img/badge.png", target="_blank", alt="Claro")
+					span © Copyright {{ year }} - Todos os direitos reservados
+					div
+						a(href="https://www.facebook.com/clarobrasil")
+							img(src="resources/img/fb_icon.png", target="_blank", alt="Facebook Claro")
+						a(href="https://twitter.com/clarobrasil")
+							img(src="resources/img/tw_icon.png", target="_blank", alt="Twitter Claro")
+	script(src="resources/js/data.js")

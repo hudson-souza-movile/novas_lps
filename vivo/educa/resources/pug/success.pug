@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="pt-br")
+head
+	include templates/subscription_head
+body#body(onload="load_contraste()")
+	header
+		a(href="subscription.html") Dicas Pet
+		.carrier-logo
+	.container
+		.hidden
+			| #if( $hiddenFieldsMap.entrySet() )
+			| #foreach($hiddenField in $hiddenFieldsMap.entrySet())
+			input(type="hidden" name="$hiddenField.key" value="$hiddenField.value")
+			| #end
+			| #end
+		p Parabéns! Sua assinatura foi realizada com sucesso!
+		p Que tal voltar a página e ver os conteúdos que vai receber?
+		a.cta(href="index.html") Voltar à página
+	.hidden
+		//- analytics
+		| #if( $pixel )
+		| $pixel
+		| #end
+		| #if( $analytics )
+		| $analytics
+		| #end

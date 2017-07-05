@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <link rel="stylesheet" href="resources/css/style.css"/>
+  <script src="resources/js/moon.min.js"></script>
+  <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+  <title>Claro Pet</title>
+  <meta name="description" content="As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação."/>
+  <meta name="keywords" content="pet, claro pet, dr pet, estopinha, alexandre rossi, doutor pet"/>
+  <meta name="author" content="Movile / Claro"/>
+  <meta name="theme-color" content="#db5945"/>
+  <meta property="og:site_name" content="Dicas Pet"/>
+  <meta property="og:title" content="Dicas Pet"/>
+  <meta property="og:description" content="As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="resources/img/img-header.png"/>
+  <meta name="twitter:title" content="Claro Dr. Pet!"/>
+  <meta name="twitter:description" content="Dicas do Dr. Pet para seu bichinho de estimação!"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:image" content="resources/img/img-header.png"/>
+  <script src="resources/js/contraste.js"></script>
+</head>
+<body id="body" onload="load_contraste()">
+  <div id="app">
+    <header id="inico"><a class="jump_link" href="#vantagens">Ir para seção vantagens</a><a class="contraste" href="javascript:" onclick="contraste()">Ativar contraste</a>
+      <div class="container flex">
+        <div>
+          <h1>{{ page_title }}</h1>
+          <p>{{ page_subtitle }}</p><a class="cta" href="subscription.html">{{ cta1 }}</a>
+        </div><img src="resources/img/header-img.png" alt="cachorro claro pet"/>
+      </div>
+    </header>
+    <section class="features" id="vantagens"><a class="jump_link" href="#como_funciona">Ir para seção Como funciona</a>
+      <div class="container">
+        <h2>{{ sec1_title }}</h2>
+        <div class="content">
+          <div class="card">
+            <div>
+              <h3>{{ card1_title }}</h3>
+              <p>{{ card1_text }}</p>
+            </div><img src="resources/img/img-card1.png" alt="Alexandre Rossi"/>
+          </div>
+          <div class="card">
+            <div>
+              <h3>{{ card2_title }}</h3>
+              <p>{{ card2_text }}</p>
+            </div><img src="resources/img/img-card2.png" alt="Cachorro e gatos amigos"/>
+          </div>
+          <div class="card">
+            <div>
+              <h3>{{ card3_title }}</h3>
+              <p>{{ card3_text }}</p>
+            </div><img src="resources/img/img-card3.png" alt="Gato"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="como" id="como_funciona"><a class="jump_link" href="#assinar">Ir para seção Assinar</a>
+      <div class="container">
+        <div class="content">
+          <div>
+            <h2>{{ sec2_title }}</h2>
+            <p>{{ sec2_text }}</p>
+            <p m-if="sec2_text2">{{ sec2_text2 }}</p>
+          </div><img src="resources/img/img-como-funciona.png" alt="exemplo de sms"/>
+        </div>
+      </div>
+    </section>
+    <section class="cta2" id="assinar"><a class="jump_link" href="#redes">Ir para seção Redes sociais</a>
+      <div class="container">
+        <h2>{{ sec3_title }}</h2><a class="cta" href="subscription.html">{{ cta2 }}</a>
+      </div>
+    </section>
+    <footer id="redes">
+      <div class="container">
+        <div class="content"><a href="http://claro.com.br"><img src="resources/img/badge.png" target="_blank" alt="Claro"/></a><span>© Copyright {{ year }} - Todos os direitos reservados</span>
+          <div><a href="https://www.facebook.com/clarobrasil"><img src="resources/img/fb_icon.png" target="_blank" alt="Facebook Claro"/></a><a href="https://twitter.com/clarobrasil"><img src="resources/img/tw_icon.png" target="_blank" alt="Twitter Claro"/></a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="resources/js/data.js"></script>
+</body>

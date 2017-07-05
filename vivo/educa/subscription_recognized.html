@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <link rel="stylesheet" href="resources/css/style_claro.css"/>
+  <link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+  <script src="resources/js/contraste.js"></script>
+  <title>Claro Pet</title>
+  <meta name="description" content="As melhores dicas do maior especialista em comportamento animal no Brasil para pessoas que são apaixonadas por seus bichinhos de estimação."/>
+  <meta name="theme-color" content="#db5945"/>
+</head>
+<body id="body" onload="load_contraste()">
+  <header><a href="index.html">Dicas Pet</a>
+    <div class="carrier-logo"></div>
+  </header>
+  <form name="numero" id="form-numero" action="#springUrl( $subscriptionURL )" method="post" onsubmit="getPhone(event)">
+    <div class="hidden">
+      #if( $hiddenFieldsMap.entrySet() )
+      #foreach($hiddenField in $hiddenFieldsMap.entrySet())
+      <input type="hidden" name="$hiddenField.key" value="$hiddenField.value"/>
+      #end
+      #end
+    </div>
+    <p>Siga os passos para concluir a sua assinatura do produto.</p>
+    <div class="checkbox">
+      <input type="checkbox" id="checkbox"/>
+      <label for="checkbox">Li e aceito os <a href="termos.html">termos e condições</a></label>
+    </div>
+    <input type="hidden" id="ddd"/>
+    <input type="hidden" id="telefone"/>
+    <button class="cta">Assinar</button>
+    <p>Valor do serviço de R$ 3,99 por semana. Experimente grátis por 3 dias.</p>
+  </form>
+  <div class="hidden">
+    #if( $pixel )
+    $pixel
+    #end
+    #if( $analytics )
+    $analytics
+    #end
+  </div>
+  <script>
+    // Check checkbox
+    function getPhone(event) {
+    	var check = document.getElementById('checkbox').checked;
+    	if (check === true) {
+    		document.getElementById("form-numero").submit();
+    	} else {
+    		event.preventDefault();
+    		alert("Por favor, concorde com os termos")
+    		document.getElementById('checkbox').focus();
+    	}
+    }
+  </script>
+</body>
