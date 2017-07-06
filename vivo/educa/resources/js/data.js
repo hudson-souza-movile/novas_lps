@@ -57,8 +57,6 @@ const app1 = new Moon({
 		app: true,
 		app_store: "https://itunes.apple.com/br/app/vivo-educa/id1158949850?ls=1&mt=8", //URL
 		play_store: "https://play.google.com/store/apps/details?id=com.movile.learning.vivo", //URL
-		windows_store: "", //URL
-		web_store: "", //URL
 	}
 });
 
