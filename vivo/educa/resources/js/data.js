@@ -14,13 +14,13 @@ const app1 = new Moon({
 		"Mais que aulinhas",
 		
 		card1_title:
-		"Dicas de carreira",
+		"Guias de carreira",
 		
 		card1_text:
 		"Tenha aulas preparatórias para entrevistas de emprego com os cursos de carreira do e melhore suas entrevistas de emprego.",
 		
 		card2_title:
-		"Cozinha e gastronomia",
+		"Dicas de gastronomia",
 		
 		card2_text:
 		"Gostaria de saber cozinhar melhor ou melhorar o que você já sabe? Aqui você consegue aprender com cursos básicos e avançados.",
@@ -45,6 +45,20 @@ const app1 = new Moon({
 		
 		cta2:
 		"Quero começar a aprender!",
+
+		// which kind of footer?	
+		social: false,
+		facebook: "https://www.facebook.com/clarobrasil", //URL
+		twitter: "https://twitter.com/clarobrasil",  //URL
+		instagram: "", //URL
+		pinterest: "", //URL
+		linkedin: "", //URL
+
+		app: true,
+		app_store: "https://itunes.apple.com/br/app/vivo-educa/id1158949850?ls=1&mt=8", //URL
+		play_store: "https://play.google.com/store/apps/details?id=com.movile.learning.vivo", //URL
+		windows_store: "", //URL
+		web_store: "", //URL
 	}
 });
 

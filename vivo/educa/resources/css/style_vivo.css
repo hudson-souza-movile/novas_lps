@@ -27,13 +27,13 @@ header {
     padding-left: 20px;
     font-size: 20px;
     font-weight: 700;
-    color: #D32E27; }
+    color: #F69F05; }
     header a:before {
       position: absolute;
       top: 5px;
       left: 0;
       content: "";
-      background: url(../img/back.png) no-repeat center center #D32E27;
+      background: url(../img/back.png) no-repeat center center #F69F05;
       background-size: contain;
       width: 16px;
       height: 16px; }
@@ -47,10 +47,12 @@ form, .container {
   width: 100%;
   max-width: 414px;
   margin: 20px auto;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  text-align: center; }
   form p, .container p {
     margin-bottom: 10px;
-    font-size: 16px; }
+    font-size: 16px;
+    text-align: left; }
   form input[type='tel'], .container input[type='tel'] {
     width: 100%;
     padding: 10px;
@@ -77,7 +79,7 @@ form, .container {
   max-width: 800px; }
 
 a {
-  color: #D32E27; }
+  color: #F69F05; }
 
 ::-webkit-input-placeholder {
   color: #D6D6D6; }
@@ -97,12 +99,12 @@ a {
   margin: 10px 0px;
   width: 100%;
   border: none;
-  background: #FFCF0D;
-  color: #000;
+  background: #F69F05;
+  color: #fff;
   font-weight: 700;
   font-size: 24px;
   text-align: center;
-  border-bottom: 4px solid #917609;
+  border-bottom: 4px solid #F69F05;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform-origin: center; }
@@ -126,4 +128,4 @@ a {
     color: white !important;
     filter: grayscale(100%) !important; }
 
-/*# sourceMappingURL=style_claro.css.map */
+/*# sourceMappingURL=style_vivo.css.map */

@@ -27,6 +27,8 @@ h1
 	color: $header-title
 a, h2
 	color: $subtitle-color
+.como h2, .como p
+	color: $como-color
 .cta2
 	h2
 		color: $cta2-title
@@ -95,7 +97,7 @@ a.jump_link
 	overflow-x: hidden
 header
 	background: $header-bg
-	box-shadow: 0 3px 20px 0 rgba(168,118,125,0.62)
+	box-shadow: 0 3px 20px 0 $header-shadow
 	background-size: cover
 	position: relative
 	padding: 30px 0px
@@ -135,7 +137,9 @@ section
 		margin-left: -15px
 		margin-right: -15px
 .card
-	background: white
+	background: $card-bg
+	width: 97%
+	width: calc(100% - 30px)
 	padding: 3rem
 	border-radius: $border-radius
 	box-shadow: 4px 4px 20px 0 rgba(0,0,0,0.10)
@@ -148,11 +152,22 @@ section
 		margin-bottom: 2rem
 	p
 		padding-bottom: 30px
-	img
+	.img
+		position: relative
 		width: calc(100% + 60px)
-		margin-right: -30px
 		margin-left: -30px
-		margin-bottom: -30px
+		margin-bottom: -33px
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 90px
+			background: none
+			background: linear-gradient($card-bg, transparent)
+	img
+		width: 100%
 section.como
 	.content
 		div
@@ -170,17 +185,37 @@ section.cta2
 footer
 	background: $footer-bg
 	padding: 30px 0px
+	span
+		color: $footer-color
+	a
+		color: $footer-color
 	.content
 		height: 100%
 		display: flex
 		align-items: center
 		justify-content: space-between
+		& > a
+			height: 50px
+			display: flex
+			align-items: center
+			width: 10%
+			img
+				max-height: 100%
+				max-width: 100%
 		div
-			a
-				color: $footer-color
-				img
-					width: 40px
-					margin-left: 0px
+			width: 10%
+			display: flex
+			align-items: center
+		.social
+			img
+				width: 40px
+				margin-left: 0px
+		.app
+			flex-direction: column
+			align-items: flex-end
+			img
+				height: 30px
+				margin-top: 4px
 @media (max-width: 1070px)
 	header
 		img
@@ -249,9 +284,11 @@ footer
 				p
 					padding-bottom: 0
 					margin-bottom: 0
-				img
-					max-width: 185px
-					margin: -15px -15px -30px 15px
+				.img
+					margin-right: -15px
+					margin-left: 15px
+					img
+						width: 180px
 	section.features
 		margin-top: 90px
 	section.como .content
@@ -265,11 +302,20 @@ footer
 			text-align: center
 		a, div
 			order: 1
+		.content
+			& > a
+				height: 100px
+				display: block
+				width: 15%
+			div
+				width: 100%
+			.app
+				align-items: center
 @media (max-width: 500px)
 	.container
 		padding: 15px
 	header
-		padding-top: 0px
+		padding-top: 30px
 	p
 		font-size: 18px
 	a.cta
@@ -289,9 +335,9 @@ footer
 				p
 					padding-bottom: 0
 					margin-bottom: 0
-				img
-					max-width: calc(100% + 30px)
-					margin: 10px -15px -15px -15px
+				.img
+					img
+						width: calc(100% + 30px)
 .contraste-on
 	background: white !important
 	*

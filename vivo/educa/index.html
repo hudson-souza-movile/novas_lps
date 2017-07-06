@@ -43,19 +43,22 @@
             <div>
               <h3>{{ card1_title }}</h3>
               <p>{{ card1_text }}</p>
-            </div><img src="resources/img/img-card1.png" alt="Alexandre Rossi"/>
+            </div>
+            <div class="img"><img src="resources/img/img-card1.png" alt="Alexandre Rossi"/></div>
           </div>
           <div class="card">
             <div>
               <h3>{{ card2_title }}</h3>
               <p>{{ card2_text }}</p>
-            </div><img src="resources/img/img-card2.png" alt="Cachorro e gatos amigos"/>
+            </div>
+            <div class="img"><img src="resources/img/img-card2.png" alt="Cachorro e gatos amigos"/></div>
           </div>
           <div class="card">
             <div>
               <h3>{{ card3_title }}</h3>
               <p>{{ card3_text }}</p>
-            </div><img src="resources/img/img-card3.png" alt="Gato"/>
+            </div>
+            <div class="img"><img src="resources/img/img-card3.png" alt="Gato"/></div>
           </div>
         </div>
       </div>
@@ -78,8 +81,9 @@
     </section>
     <footer id="redes">
       <div class="container">
-        <div class="content"><a href="http://claro.com.br"><img src="resources/img/badge.png" target="_blank" alt="Claro"/></a><span>© Copyright {{ year }} - Todos os direitos reservados</span>
-          <div><a href="https://www.facebook.com/clarobrasil"><img src="resources/img/fb_icon.png" target="_blank" alt="Facebook Claro"/></a><a href="https://twitter.com/clarobrasil"><img src="resources/img/tw_icon.png" target="_blank" alt="Twitter Claro"/></a></div>
+        <div class="content"><a href="http://vivo.com.br"><img src="resources/img/carrier-logo.png" alt="Vivo"/></a><span>© Copyright {{ year }} - Todos os direitos reservados</span>
+          <div class="social" m-if="social"><a m-if="facebook" href="{{ facebook }}"><img src="resources/img/fb_icon.png" target="_blank" alt="Facebook"/></a><a m-if="twitter" href="{{ twitter }}"><img src="resources/img/tw_icon.png" target="_blank" alt="Twitter"/></a><a m-if="instagram" href="{{ instagram }}"><img src="resources/img/insta_icon.png" target="_blank" alt="Instagram"/></a><a m-if="pinterest" href="{{ pinterest }}"><img src="resources/img/insta_icon.png" target="_blank" alt="Pinterest"/></a><a m-if="linkedin" href="{{ linkedin }}"><img src="resources/img/linkedin_icon.png" target="_blank" alt="Linkedin"/></a></div>
+          <div class="app" m-if="app"><span>Baixe: </span><a m-if="app_store" href="{{ app_store }}"><img src="resources/img/badge-app-store.png" target="_blank" alt="App Store"/></a><a href="{{ play_store }}" m-if="play_store"><img src="resources/img/badge-play-store.png" target="_blank" alt="Play Store"/></a><a href="{{ windows_store }}" m-if="windows_store"><img src="resources/img/badge-windows-store.png" target="_blank" alt="Windows Store"/></a><a href="{{ web_store }}" m-if="web_store"><img src="resources/img/badge-web-store.png" target="_blank" alt="Web"/></a></div>
         </div>
       </div>
     </footer>

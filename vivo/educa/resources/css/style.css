@@ -25,13 +25,16 @@ html {
   font-size: 10px; }
 
 body {
-  background: #F6F6F6; }
+  background: #363636; }
 
 h1 {
   color: #fff; }
 
 a, h2 {
-  color: #D32E27; }
+  color: #fff; }
+
+.como h2, .como p {
+  color: #fff; }
 
 .cta2 h2 {
   color: #fff; }
@@ -69,12 +72,12 @@ a.cta {
   padding: 20px 10px;
   width: 100%;
   max-width: 400px;
-  background: #FFCF0D;
-  color: #000;
+  background: #F69F05;
+  color: #fff;
   font-weight: 700;
   font-size: 2.8rem;
   text-align: center;
-  border-bottom: 4px solid #917609;
+  border-bottom: 4px solid #F69F05;
   box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   transform-origin: bottom center; }
@@ -111,8 +114,8 @@ a.jump_link {
   overflow-x: hidden; }
 
 header {
-  background: linear-gradient(-180deg, #D42D1D 0%, #AE2618 100%) red;
-  box-shadow: 0 3px 20px 0 rgba(168, 118, 125, 0.62);
+  background: url(../img/header.png) no-repeat top center;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
   background-size: cover;
   position: relative;
   padding: 30px 0px; }
@@ -155,7 +158,9 @@ section {
     margin-right: -15px; }
 
 .card {
-  background: white;
+  background: #fff;
+  width: 97%;
+  width: calc(100% - 30px);
   padding: 3rem;
   border-radius: 4px;
   box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.1);
@@ -168,11 +173,22 @@ section {
     margin-bottom: 2rem; }
   .card p {
     padding-bottom: 30px; }
-  .card img {
+  .card .img {
+    position: relative;
     width: calc(100% + 60px);
-    margin-right: -30px;
     margin-left: -30px;
-    margin-bottom: -30px; }
+    margin-bottom: -33px; }
+    .card .img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background: none;
+      background: linear-gradient(#fff, transparent); }
+  .card img {
+    width: 100%; }
 
 section.como .content div {
   max-width: 600px;
@@ -184,23 +200,43 @@ section.como .content img {
 section.cta2 {
   padding: 60px 0px;
   text-align: center;
-  background: #D32E27; }
+  background: linear-gradient(-180deg, #6F65C7 0%, #FF934E 100%); }
   section.cta2 .cta {
     margin-top: 50px; }
 
 footer {
-  background: #fff;
+  background: #363636;
   padding: 30px 0px; }
+  footer span {
+    color: #fff; }
+  footer a {
+    color: #fff; }
   footer .content {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    footer .content div a {
-      color: #363636; }
-      footer .content div a img {
-        width: 40px;
-        margin-left: 0px; }
+    footer .content > a {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      width: 10%; }
+      footer .content > a img {
+        max-height: 100%;
+        max-width: 100%; }
+    footer .content div {
+      width: 10%;
+      display: flex;
+      align-items: center; }
+    footer .content .social img {
+      width: 40px;
+      margin-left: 0px; }
+    footer .content .app {
+      flex-direction: column;
+      align-items: flex-end; }
+      footer .content .app img {
+        height: 30px;
+        margin-top: 4px; }
 
 @media (max-width: 1070px) {
   header img {
@@ -272,9 +308,11 @@ footer {
         section .content .card p, section.features .content .card p {
           padding-bottom: 0;
           margin-bottom: 0; }
-        section .content .card img, section.features .content .card img {
-          max-width: 185px;
-          margin: -15px -15px -30px 15px; }
+        section .content .card .img, section.features .content .card .img {
+          margin-right: -15px;
+          margin-left: 15px; }
+          section .content .card .img img, section.features .content .card .img img {
+            width: 180px; }
 
   section.features {
     margin-top: 90px; }
@@ -289,13 +327,21 @@ footer {
     margin-bottom: 10px;
     text-align: center; }
   footer a, footer div {
-    order: 1; } }
+    order: 1; }
+  footer .content > a {
+    height: 100px;
+    display: block;
+    width: 15%; }
+  footer .content div {
+    width: 100%; }
+  footer .content .app {
+    align-items: center; } }
 @media (max-width: 500px) {
   .container {
     padding: 15px; }
 
   header {
-    padding-top: 0px; }
+    padding-top: 30px; }
 
   p {
     font-size: 18px; }
@@ -317,9 +363,8 @@ footer {
       section.features .content .card p {
         padding-bottom: 0;
         margin-bottom: 0; }
-      section.features .content .card img {
-        max-width: calc(100% + 30px);
-        margin: 10px -15px -15px -15px; } }
+      section.features .content .card .img img {
+        width: calc(100% + 30px); } }
 .contraste-on {
   background: white !important; }
   .contraste-on * {
