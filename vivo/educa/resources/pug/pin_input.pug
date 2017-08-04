@@ -15,7 +15,7 @@ body#body(onload="load_contraste()")
 			| #end
 		p Siga os passos para concluir a sua assinatura do produto.
 		p Insira o PIN recebido:
-		input.pin(type="tel", id="pin", name="pin", placeholder="1234", maxlength="4", onkeypress='validate(event)')
+		input.pin(type="number", id="pin", name="pin", placeholder="1234", maxlength="4", onkeypress='validate(event)')
 		button.cta Confirmar
 		a(href="javascript:") Reenviar PIN.
 	.hidden
