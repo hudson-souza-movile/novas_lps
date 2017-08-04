@@ -21,6 +21,7 @@ body#body(onload="load_contraste()")
 					.card
 						div
 							h3 {{ card1_title }}
+							//- img(src="resources/img/img-card1.png", alt="Alexandre Rossi")
 							p {{ card1_text }}
 						.img
 							img(src="resources/img/img-card1.png", alt="Alexandre Rossi")
@@ -45,7 +46,7 @@ body#body(onload="load_contraste()")
 						h2 {{ sec2_title }}
 						p {{ sec2_text }}
 						p(m-if="sec2_text2") {{ sec2_text2 }}
-					img(src="resources/img/img-como-funciona.png", alt="exemplo de sms")
+					img(m-if="sec2_img", src="resources/img/img-como-funciona.png", alt="exemplo de sms")
 		section.cta2#assinar
 			a.jump_link(href="#redes") Ir para seção Redes sociais
 			.container

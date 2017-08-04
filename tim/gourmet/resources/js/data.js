@@ -2,49 +2,51 @@ const app1 = new Moon({
 	el: "#app",
 	data: {
 		page_title:
-		"Educação aproxima seus horizontes!",
+		"Receitas do chef Claude Troisgros para sua casa.",
 		
 		page_subtitle:
-		"O Vivo Educa tem mais de 200 cursos à sua disposição, classificados entre 8 completas categorias, para aprender no seu tempo e onde quiser.",
+		"Fique por dentro dos segredos de culinária dele e surpreenda na cozinha! Saboreie já as novas tendências do mundo da gastronomia!",
 		
 		cta1:
-		"Quero começar a aprender!",
+		"Quero cozinhar como chef!",
 		
 		sec1_title:
-		"Mais que aulinhas",
+		"Mais que receitinhas",
 		
 		card1_title:
-		"Guias de carreira",
+		"Dicas de restaurantes",
 		
 		card1_text:
-		"Tenha aulas preparatórias para entrevistas de emprego com os cursos de carreira do e melhore suas entrevistas de emprego.",
+		"Quer sair pra jantar e não sabe onde? O TIM Gourmet te ajuda mostrando os restaurantes mais próximos e informações como horário de funcionamento e preço. Imperdível!",
 		
 		card2_title:
-		"Dicas de gastronomia",
+		"Conteúdo gastronômico",
 		
 		card2_text:
-		"Gostaria de saber cozinhar melhor ou melhorar o que você já sabe? Aqui você consegue aprender com cursos básicos e avançados.",
+		"Fique sabendo quais são os melhores eventos gastronômicos que vão estar na sua cidade ou próximos a você e vivencie novas exoeriências culinárias!",
 		
 		card3_title:
-		"Aprenda tecnologia",
+		"Peça um Delivery",
 		
 		card3_text:
-		"Em pleno século 21 não se pode mais ficar sem conhecer o mínimo da tecnologia que nos cerca e entendê-las melhor.",
+		"Com preguiça de cozinhar hoje? Com o iFood integrado no TIM Gourmet, você poderá pedir seu prato favorito e ele chegará na sua casa! Quer praticidade maior do que isso?",
 		
 		sec2_title:
 		"Como funciona?",
 		
 		sec2_text:
-		"O Vivo Educa pode ser assinado aqui neste site ou no aplicativo. Assinando e baixando o aplicativo, você vai ter acesso a todos os cursos da nossa plataforma, exercícios, materiais de apoio, além de ter cursos ao vivo e poder acessar todos os vídeos offline usando seu smartphone ou tablet.",
+		"O TIM gourmet pode ser assinado via aplicativo ou via SMS. Caso você não tenha um smartphone para baixar o app, você também poderá assinar o TIM gourmet e receberá o conteúdo de receitas de culinária, de segunda a sexta, via SMS.",
 		
 		sec2_text2:
-		"O valor do serviço é de R$ 4,99/semana ou de R$12,99/mês (desconto de 13%) mas você também tem a opção de acessar todas as aulas gratuitas pelo tempo até encontrar o curso que vai querer!",
+		"Para assinar, envie TG para o número 3040. Após o período de gratuidade de 3 dias, o valor do serviço é de R$ 3,99 por semana. Os custos do prato escolhido e da taxa de entrega no TIM gourmet Delivery não estão incluídos na assinatura do serviço.",
+
+		sec2_img: true,
 		
 		sec3_title:
-		"Quer aprender mais?",
+		"Quer saber mais?",
 		
 		cta2:
-		"Quero começar a aprender!",
+		"Experimente por 3 dias!",
 
 		// which kind of footer?	
 		social: false,
