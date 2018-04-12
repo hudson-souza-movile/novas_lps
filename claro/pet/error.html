@@ -21,8 +21,7 @@
     <div class="hidden">
       #if( $hiddenFieldsMap.entrySet() )
       #foreach($hiddenField in $hiddenFieldsMap.entrySet())
-      <input type="hidden" name="$hiddenField.key" value="$hiddenField.value"/>
-      #end
+      <input type="hidden" name="$hiddenField.key" value="$hiddenField.value"/>#end
       #end
     </div>
     <p>Infelizmente houve um erro na sua assinatura</p>
